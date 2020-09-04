@@ -18,7 +18,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/starter/examen',
+    path: '/examenes',
     title: 'Examenes',
     icon: 'mdi mdi-file',
     class: '',
