@@ -13,7 +13,7 @@ export class ExamenesComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.examenesService.getExamenes().subscribe(resp => this.examenes = resp);
+    this.examenesService.getExamenes().subscribe(resp =>  this.examenes =  resp);
   }
 
 }

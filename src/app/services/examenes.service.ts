@@ -25,24 +25,11 @@ export class ExamenesServices {
   actualizarExamen = (id: String, examen: ExamenModel) => this.http.put(`${this.url}/${id}`, examen);
 
 
-  private arrayCrearExamenes = (examenesObject: object) => {
-    const  examenes: ExamenModel[] = [];
+  private arrayCrearExamenes = (examenesObject: any) => {
+    const examen: ExamenModel[] = [];
 
-    console.log(examenesObject);
+    if (examenesObject !== null) {  Object.keys(examenesObject).forEach( key => examen.push(examenesObject[key])); }
 
-    if (examenesObject === null) {
-      return [];
-    }
-
-    Object.keys(examenesObject).forEach( key => {
-      // const examen: ExamenModel = examenesObject[key];
-      // examen.id = key;
-      // examenes.push(examen);
-      console.log(examenesObject);
-
-    });
-
-    return examenes;
+    return examen;
   }
-
 }
