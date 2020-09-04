@@ -11,6 +11,14 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '/starter',
+    title: 'Perfil',
+    icon: 'mdi mdi-account',
+    class: '',
+    extralink: false,
+    submenu: []
+  },
+  {
+    path: '/starter/examen',
     title: 'Examenes',
     icon: 'mdi mdi-file',
     class: '',
@@ -18,7 +26,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/starter',
+    path: '/starter/pruebas',
     title: 'Pruebas',
     icon: 'mdi mdi-view-carousel',
     class: '',
@@ -26,7 +34,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/starter',
+    path: '/starter/config',
     title: 'Configuraciones',
     icon: 'mdi mdi-image-filter-vintage',
     class: '',
@@ -34,7 +42,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/starter',
+    path: '/starter/salir',
     title: 'Salir',
     icon: 'mdi mdi-backburger',
     class: '',
