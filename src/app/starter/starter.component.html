@@ -2,20 +2,28 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                {{subtitle}}
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+                <div class="row">
+                    <div class="col">
+                        <h3>Nombre: </h3>
+                        <p>{{usuario.nombre}}</p>
+                    </div>
+                    <div class="col">
+                        <h3>Apellido: </h3>
+                        <p>{{usuario.apellido}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Experiencia:</h3>
+                        <p>{{usuario.experiencia}}</p>
+                    </div>
+                </div>
+                <div class="ro">
+                    <div class="col">
+                        <h3>Correo:</h3>
+                        <p>{{usuario.correo}}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
