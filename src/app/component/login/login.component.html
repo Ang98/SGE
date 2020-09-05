@@ -1,0 +1,56 @@
+<h4>Login de <small>usuario</small></h4>
+<hr>
+<div class="container">
+    <div class="row mt-5">
+				<div class="col-md-5" >
+					<img src="../../../assets/images/img-01.png" alt="IMG">
+				</div>
+                    <form class ="col-md-6 pt-5" autocomplete="off" [formGroup]="forma" (ngSubmit)="save()">
+
+                        <div>
+
+                            <div class="form-group row">
+                            <label class="col-3 col-form-label">Correo</label>
+                            <div class="col-6">
+
+                                <input class="form-control"
+                                    type="text"
+                                    placeholder="Email"
+                                    formControlName="email"
+                                    [class.is-invalid]="invalitData('email')">
+                                    <small *ngIf="invalitData('email')" class="text-danger">
+                                        Ingrese un correo valido
+                                    </small>
+                            </div>
+                            </div>
+
+                            <div class="form-group row">
+                            <label class="col-3 col-form-label">Contraseña</label>
+                            <div class="col-6">
+
+                                <input class="form-control"
+                                    type="password"
+                                    placeholder="Password"
+                                    formControlName="password"
+                                    [class.is-invalid]="invalitData('password')">
+                                    
+                                    <small *ngIf="invalitData('password')" class="text-danger">
+                                        Ingrese un correo valido
+                                    </small>
+                            </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label">&nbsp;</label>
+                            <div class="input-group col-md-8">
+                            <button type="submit" class="btn btn-outline-primary">
+                                Inisiar sesión
+                            </button>
+                            </div>
+                        </div>
+
+                    </form>
+    </div>
+</div>

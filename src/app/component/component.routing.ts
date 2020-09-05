@@ -15,11 +15,24 @@ import { NgbdtimepickerBasicComponent } from './timepicker/timepicker.component'
 import { NgbdtypeheadBasicComponent } from './typehead/typehead.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { CardsComponent } from './card/card.component';
+import { LoginComponent } from './login/login.component';
 
 export const ComponentsRoutes: Routes = [
   {
     path: '',
     children: [
+      {
+        path: 'login',
+        component: LoginComponent,
+        data: {
+          title: 'Login',
+          urls: [
+            { title: 'Dashboard', url: '/dashboard' },
+            { title: 'ngComponent' },
+            { title: 'Progressbar' }
+          ]
+        }
+      },
       {
         path: 'progressbar',
         component: NgbdpregressbarBasicComponent,
@@ -28,7 +41,7 @@ export const ComponentsRoutes: Routes = [
           urls: [
             { title: 'Dashboard', url: '/dashboard' },
             { title: 'ngComponent' },
-            { title: 'Progressbar' }
+            { title: 'Login' }
           ]
         }
       },
