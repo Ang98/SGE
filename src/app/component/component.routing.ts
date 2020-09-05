@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { ExamenesComponent } from './examenes/examenes.component';
+import { ConfiguracionComponent } from './configuracion/configuracion.component'
 
 export const ComponentsRoutes: Routes = [
   {
@@ -17,7 +18,19 @@ export const ComponentsRoutes: Routes = [
             { title: 'Examenes' }
           ]
         }
-      }
+      }, {
+        path: 'configuracion',
+        component: ConfiguracionComponent,
+        data: {
+          title: 'Configuracion',
+          urls: [
+            { title: 'Dashboard', url: '/dashboard' },
+            { title: 'ngComponent' },
+            { title: 'Configuracion' }
+          ]
+        }
+      },
+
     ]
   }
 ];

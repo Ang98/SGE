@@ -34,7 +34,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/docente/config',
+    path: '/docente/configuracion',
     title: 'Configuraciones',
     icon: 'mdi mdi-image-filter-vintage',
     class: '',
