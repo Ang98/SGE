@@ -8,8 +8,12 @@
         </div>
         <div class="col-4 text-right">
             <div *ngIf="pageInfo?.title==='Examenes'">
-                <a class="btn btn-success" routerLink="agregar"><i class="fa fa-plus"></i> Añadir examen</a>
+                <a class="btn btn-success" routerLink="/docente/examenes/agregar"><i class="fa fa-plus"></i> Añadir examen</a>
             </div>
+            <div *ngIf="pageInfo?.title==='Detalles de Exemen' || pageInfo?.title==='Agregar examenes'">
+                <a class="btn btn-warning" routerLink="/docente/examenes"><i class="fa fa-arrow-left"></i> Regresar</a>
+            </div>
+
         </div>
     </div>
 </div>

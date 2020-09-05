@@ -18,7 +18,6 @@ export class ExamenesComponent implements OnInit {
 
   mostrarRuta(path: string, id: string){
     console.log(`${path}/${id}`);
-    this.router.navigateByUrl('id');
+    this.router.navigateByUrl(`${path}/${id}`);
   }
-
 }
