@@ -26,10 +26,15 @@ export class ExamenesServices {
 
 
   private arrayCrearExamenes = (examenesObject: any) => {
-    const examen: ExamenModel[] = [];
-
-    if (examenesObject !== null) {  Object.keys(examenesObject).forEach( key => examen.push(examenesObject[key])); }
-
-    return examen;
+    const examenes: ExamenModel[] = [];
+    console.log(examenesObject);
+    if (examenesObject !== null) {  Object.keys(examenesObject).forEach( key => {
+        const examen: ExamenModel = examenesObject[key];
+        examen.id = key;
+        examenes.push(examen);
+      });
+    }
+    console.log(examenes);
+    return examenes;
   }
 }
