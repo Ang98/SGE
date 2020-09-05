@@ -23,6 +23,7 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { CardsComponent } from './card/card.component';
 import { ExamenesComponent } from './examenes/examenes.component';
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
+import { PruebaComponent } from './prueba/prueba.component';
 // import { ExamenComponent } from './examen/examen.component';
 
 @NgModule({
@@ -50,7 +51,8 @@ import { ConfiguracionComponent } from './configuracion/configuracion.component'
     ButtonsComponent,
     CardsComponent,
     ExamenesComponent,
-    ConfiguracionComponent/* ,*/
+    ConfiguracionComponent,
+    PruebaComponent/* ,*/
     // ExamenComponent
   ]
 })
