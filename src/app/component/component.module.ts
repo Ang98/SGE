@@ -22,7 +22,7 @@ import { NgbdtypeheadBasicComponent } from './typehead/typehead.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { CardsComponent } from './card/card.component';
 import { ExamenesComponent } from './examenes/examenes.component';
-import { ExamenComponent } from './examen/examen.component';
+// import { ExamenComponent } from './examen/examen.component';
 
 @NgModule({
   imports: [
@@ -48,8 +48,8 @@ import { ExamenComponent } from './examen/examen.component';
     NgbdtypeheadBasicComponent,
     ButtonsComponent,
     CardsComponent,
-    ExamenesComponent,
-    ExamenComponent
+    ExamenesComponent/* ,*/
+    // ExamenComponent
   ]
 })
 export class ComponentsModule {}

@@ -19,79 +19,79 @@ Main sidebar
     transition: 0.2s ease-in;
 }
 
+
 /*******************
 sidebar navigation
 ******************/
+
 .scroll-sidebar {
     height: calc(100% - 20px);
     position: relative;
-	padding-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .user-profile {
-  position: relative;
-  background-size: cover;
-  .setpos {
-    top: -47px;
-    right: -3px;
-  }
-  .profile-img {
-    width: 70px;
-    margin: 0 auto;
-    padding: 10px 0 5px 0;
-    border-radius: 100%;
-    img {
-      width: 100%;
-      padding: 5px;
-      border: 1px solid rgba(120,130,140,.13);
-      border-radius: 100%;
-    }
-  }
-  .profile-text {
-    padding: 5px 0px;
     position: relative;
-    text-align: center;
-    >a {
-      color: $gray-500;
-      padding: 0 5px;
-      &:hover {
-        color: $danger;
-      }
-      &:after {
-        display: none;
-      }
+    background-size: cover;
+    .setpos {
+        top: -47px;
+        right: -3px;
     }
-  }
-  .dropdown-menu {
-    left: 0px;
-    right: 0px;
-    top: 37px!important;
-    width: 180px;
-    margin: 0 auto;
-  }
+    .profile-img {
+        width: 70px;
+        margin: 0 auto;
+        padding: 10px 0 5px 0;
+        border-radius: 100%;
+        img {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid rgba(120, 130, 140, .13);
+            border-radius: 100%;
+        }
+    }
+    .profile-text {
+        padding: 5px 0px;
+        position: relative;
+        text-align: center;
+        >a {
+            color: $gray-500;
+            padding: 0 5px;
+            &:hover {
+                color: $danger;
+            }
+            &:after {
+                display: none;
+            }
+        }
+    }
+    .dropdown-menu {
+        left: 0px;
+        right: 0px;
+        top: 37px!important;
+        width: 180px;
+        margin: 0 auto;
+    }
 }
-
-
 
 .sidebar-nav {
     ul {
-		.nav-devider {
-		    height: 1px;
-		    background: rgba(120, 130, 140, 0.13);
-		    display: block;
-		    margin: 20px 0;
-		}
-       .sidebar-item {
-           width: $sidebar-width-full;
-           .sidebar-link {
+        .nav-devider {
+            height: 1px;
+            background: rgba(120, 130, 140, 0.13);
+            display: block;
+            margin: 20px 0;
+        }
+        .sidebar-item {
+            width: $sidebar-width-full;
+            .sidebar-link {
                 color: $sidebar-text;
-                padding:$sidebar-link-padding;
+                padding: $sidebar-link-padding;
                 display: flex;
-                white-space: nowrap; 
+                white-space: nowrap;
                 align-items: center;
                 line-height: 25px;
                 font-size: 15px;
-				font-weight: 300;
+                font-weight: 300;
                 i {
                     font-style: normal;
                     width: 30px;
@@ -104,43 +104,48 @@ sidebar navigation
                 &.active,
                 &:hover {
                     color: $danger;
-					i {
-						color: $danger;
-					}
+                    i {
+                        color: $danger;
+                    }
                 }
-				&.active {
-					font-weight: 400;
-				}
+                &.active {
+                    font-weight: 400;
+                }
             }
-           &.active > .sidebar-link{
-               color: $danger;
-           }
-           
+            &.active>.sidebar-link {
+                color: $danger;
+            }
         }
         /*******************
          Small cap
          ******************/
         .nav-small-cap {
             font-size: 12px;
-            padding:$cap-link-padding;
+            padding: $cap-link-padding;
             white-space: nowrap;
             display: flex;
             align-items: center;
             line-height: 30px;
-			text-transform: uppercase;
-			font-weight: 500;
+            text-transform: uppercase;
+            font-weight: 500;
             color: $sidebar-cap;
-			i{line-height: 30px; margin:0 5px;}
+            i {
+                line-height: 30px;
+                margin: 0 5px;
+            }
         }
     }
-    >#sidebarnav >.sidebar-item >.sidebar-link:hover{
+    >#sidebarnav>.sidebar-item>.sidebar-link:hover {
         /*background: rgba(0, 0, 0, 0.04);*/
     }
 }
+
+
 /*******************
  common m-p removed
 ******************/
-.sidebar-nav{
+
+.sidebar-nav {
     ul {
         margin: 0px;
         padding: 0px;
@@ -149,12 +154,16 @@ sidebar navigation
         }
     }
 }
+
 .collapse.in {
     display: block;
 }
+
+
 /*******************
 Down arrow
 ******************/
+
 .sidebar-nav .has-arrow {
     position: relative;
     &::after {
@@ -186,10 +195,10 @@ Down arrow
     position: fixed;
     bottom: 0px;
     left: 0px;
-    transition:0.2s ease-out;
+    transition: 0.2s ease-out;
     width: 240px;
     background: $sidebar;
-	z-index: 99;
+    z-index: 99;
     border-top: 1px solid $border-color;
     a {
         padding: 15px;
@@ -203,9 +212,11 @@ Down arrow
 
 /*.sidebar-nav .active > .has-arrow::after,*/
 
+
 /*.sidebar-nav li.selected > .has-arrow::after,*/
-.sidebar-nav li.active > .has-arrow::after,
-.sidebar-nav li > .has-arrow.active::after,
+
+.sidebar-nav li.active>.has-arrow::after,
+.sidebar-nav li>.has-arrow.active::after,
 .sidebar-nav .has-arrow[aria-expanded="true"]::after {
     -webkit-transform: rotate(-135deg) translate(0, -50%);
     -ms-transform: rotate(-135deg) translate(0, -50%);
@@ -217,23 +228,26 @@ Down arrow
 /*******************
 User Profile
 ******************/
-.user-profile{
+
+.user-profile {
     padding: 15px;
-    
-    .user-content, .user-name, .user-email{
-        color:$theme-light;
+    .user-content,
+    .user-name,
+    .user-email {
+        color: $theme-light;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
     }
 }
+
 .create-btn {
     height: 40px;
     background: $dark;
 }
 
 @media (max-width: 768px) {
-	.sidebar-footer {
-		display: none;
-	}
+    .sidebar-footer {
+        display: none;
+    }
 }

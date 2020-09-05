@@ -1,12 +1,16 @@
-<div class="row">
-    <div class="col-md-6">
-        <div class="card">
-            <div class="row row-cols-1 row-cols-md-2">
+<div class="card">
+    <div class="row row-cols-1 row-cols-md-2">
 
-                <div class="col mb-4" *ngFor="let examen of examenes">
-                    <app-examen [id]="examenes"></app-examen>
+        <div class="col mb-4" *ngFor="let examen of examenes">
+            <div class="card card-inverse" style="background-color: #333; border-color: #333;">
+                <div class="card-header">
+                    <h4 class="m-b-0 text-white">{{examen.enunciado}}</h4>
                 </div>
-
+                <div class="card-body">
+                    <h3 class="card-title">Examen.area</h3>
+                    <p class="card-text">{{examen.enunciado}}</p>
+                    <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" class="btn btn-primary">Go somewhere</a>
+                </div>
             </div>
         </div>
     </div>

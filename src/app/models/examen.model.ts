@@ -7,21 +7,12 @@ import { Injectable } from '@angular/core';
 
 export class ExamenModel {
     id: String;
-    alternativas: AlternativasModel;
-    bimestre: Number;
-    dificultad: Number;
-    enuciaddo: String;
-    grado: Number;
-    respuesta: String;
+    idDocente: String;
+    fecha: Date;
 
-    // tslint:disable-next-line: max-line-length
-    constructor (key: String, bimestre: Number, dificultad: Number, enuciaddo: String, grado: Number, respuesta: String, alternativas: AlternativasModel) {
+    constructor (key: String, idDocente: String, fecha: Date) {
         this.id = key;
-        this.bimestre = bimestre;
-        this.dificultad = dificultad;
-        this.enuciaddo = enuciaddo;
-        this.grado = grado;
-        this.respuesta = respuesta;
-        this.alternativas = alternativas;
+        this.idDocente = idDocente;
+        this.fecha = fecha;
     }
 }

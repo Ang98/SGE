@@ -10,7 +10,7 @@ import { ExamenModel } from '../models/examen.model';
 
 export class ExamenesServices {
 
-  private url = 'https://sistema-de-examenes.web.app/api/pregunta';
+  private url = 'https://sistema-de-examenes.web.app/api/examen';
 
   constructor(private http: HttpClient) {  }
 
