@@ -7,7 +7,7 @@
                         <h4 class="m-b-0 text-white">{{examen.titulo}}</h4>
                     </div>
                     <div class="col-sm-2 text-right">
-                        <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" class="btn btn-primary"><i class="fa fa-trash"></i></a>
+                        <a [routerLink]="['/agregar']" routerLinkActive="router-link-active" class="btn btn-primary"><i class="fa fa-trash"></i></a>
                     </div>
                 </div>
                 <div class="card-body ">
@@ -16,7 +16,7 @@
                             <p class="card-title text-white" style="margin: 0">Ultima modificacion: {{examen.fecha}}</p>
                         </div>
                         <div class="col-md-4 text-right">
-                            <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" class="btn btn-primary">Ver detalles</a>
+                            <a color="text-white" class="btn btn-primary" (ngClick)="mostrarRuta('/docente/examenes',examen.id)">Ver detalles</a>
                         </div>
                     </div>
                 </div>

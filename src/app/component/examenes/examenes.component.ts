@@ -16,4 +16,8 @@ export class ExamenesComponent implements OnInit {
     this.examenesService.getExamenes().subscribe(resp =>  {this.examenes =  resp; console.log(this.examenes[0])});
   }
 
+  mostrarRuta(path: string, id: string){
+    console.log(`${path}/${id}`);
+  }
+
 }
