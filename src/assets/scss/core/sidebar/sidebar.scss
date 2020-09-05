@@ -82,6 +82,7 @@ sidebar navigation
             margin: 20px 0;
         }
         .sidebar-item {
+            $danger: #7460EE;
             width: $sidebar-width-full;
             .sidebar-link {
                 color: $sidebar-text;

@@ -1,15 +1,24 @@
 <div class="card">
     <div class="row row-cols-1 row-cols-md-2">
-
         <div class="col mb-4" *ngFor="let examen of examenes">
             <div class="card card-inverse" style="background-color: #333; border-color: #333;">
-                <div class="card-header">
-                    <h4 class="m-b-0 text-white">{{examen.enunciado}}</h4>
+                <div class="card-header card-center row">
+                    <div class="col-sm-10">
+                        <h4 class="m-b-0 text-white">{{examen.titulo}}</h4>
+                    </div>
+                    <div class="col-sm-2 text-right">
+                        <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" class="btn btn-primary"><i class="fa fa-trash"></i></a>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <h3 class="card-title">Examen.area</h3>
-                    <p class="card-text">{{examen.enunciado}}</p>
-                    <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" class="btn btn-primary">Go somewhere</a>
+                <div class="card-body ">
+                    <div class="row card-center">
+                        <div class="col-md-8">
+                            <p class="card-title text-white" style="margin: 0">Ultima modificacion: {{examen.fecha}}</p>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" class="btn btn-primary">Ver detalles</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
