@@ -2,7 +2,7 @@ import { RouteInfo } from './sidebar.metadata';
 
 export const ROUTES: RouteInfo[] = [
   {
-    path: '',
+    path: '/docente/perfil',
     title: 'Docente',
     icon: 'mdi mdi-dots-horizontal',
     class: 'nav-small-cap',
@@ -10,7 +10,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/starter',
+    path: '/docente/perfil',
     title: 'Perfil',
     icon: 'mdi mdi-account',
     class: '',
@@ -18,7 +18,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/component/examenes',
+    path: '/docente/examenes',
     title: 'Examenes',
     icon: 'mdi mdi-file',
     class: '',
@@ -26,7 +26,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/component/pruebas',
+    path: '/docente/pruebas',
     title: 'Pruebas',
     icon: 'mdi mdi-view-carousel',
     class: '',
@@ -34,7 +34,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/component/config',
+    path: '/docente/config',
     title: 'Configuraciones',
     icon: 'mdi mdi-image-filter-vintage',
     class: '',
@@ -42,7 +42,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/component/salir',
+    path: '/docente/salir',
     title: 'Salir',
     icon: 'mdi mdi-backburger',
     class: '',

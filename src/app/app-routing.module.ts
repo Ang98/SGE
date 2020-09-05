@@ -8,19 +8,19 @@ export const Approutes: Routes = [
     path: '',
     component: FullComponent,
     children: [
-      { path: '', redirectTo: '/starter', pathMatch: 'full' },
+      { path: '', redirectTo: '/docente/perfil', pathMatch: 'full' },
       {
-        path: 'starter',
+        path: 'docente/perfil',
         loadChildren: () => import('./starter/starter.module').then(m => m.StarterModule)
       },
       {
-        path: 'component',
+        path: 'docente',
         loadChildren: () => import('./component/component.module').then(m => m.ComponentsModule)
       }
     ]
   },
   {
     path: '**',
-    redirectTo: '/starter'
+    redirectTo: '/docente/perfil'
   }
 ];

@@ -210,7 +210,8 @@ export const ComponentsRoutes: Routes = [
             { title: 'Examenes' }
           ]
         }
-      }
+      },
+      
     ]
   }
 ];
