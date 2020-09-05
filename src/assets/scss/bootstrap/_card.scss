@@ -7,7 +7,7 @@
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #403F44; //$card-bg;
+    background-color: $card-bg;
     background-clip: border-box;
     border: $card-border-width solid $card-border-color;
     @include border-radius($card-border-radius);
@@ -25,6 +25,15 @@
             @include border-bottom-radius($card-border-radius);
         }
     }
+}
+
+.card-fondo-examenes {
+    background-color: #403F44!important;
+}
+
+.card-fondo-examen {
+    background-color: #333;
+    border-color: #333;
 }
 
 .card-body {
