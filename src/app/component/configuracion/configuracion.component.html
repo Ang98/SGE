@@ -1,0 +1,204 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Configurar Perfil</h3>
+        <h6 class="card-subtitle">
+          Configure su nombre, apellido, coreo, etc....
+        </h6>
+        <!--- ------------------
+                Modal para datos (NgbdModalBasicComponent)  
+                ---------------------->
+        <ng-template #content1 let-modal>
+          <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">
+              Actualizar Perfil
+            </h4>
+            <button
+              type="button"
+              class="close"
+              aria-label="Close"
+              (click)="modal.dismiss('Cross click')"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="dateOfBirth">NOMBRES</label>
+                <div class="input-group">
+                  <input
+                    class="form-control"
+                    placeholder="Apellidos..."
+                    type="text"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">
+                      <i class="fa fa-user"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="dateOfBirth">APELLIDOS</label>
+                <div class="input-group">
+                  <input
+                    class="form-control"
+                    placeholder="Apellidos..."
+                    type="text"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">
+                      <i class="fa fa-user"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="dateOfBirth">CORREO</label>
+                <div class="input-group">
+                  <input
+                    class="form-control"
+                    placeholder="Correo@.com"
+                    type="email"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">
+                      <i class="fa fa-envelope"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="dateOfBirth">FECHA DE NACIMIENTO</label>
+                <div class="input-group">
+                  <input
+                    id="dateOfBirth"
+                    class="form-control"
+                    placeholder="yyyy-mm-dd"
+                    name="dp"
+                    ngbDatepicker
+                    #dp="ngbDatepicker"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-outline-secondary"
+                      (click)="dp.toggle()"
+                      type="button"
+                    >
+                      <i class="fa fa-calendar"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-dark"
+              (click)="modal.close('Save click')"
+            >
+              Guardar
+            </button>
+          </div>
+        </ng-template>
+
+        <button
+          class="btn btn-lg btn-outline-primary btn-block"
+          (click)="open1(content1)"
+        >
+          Configurar Datos
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Configurar Datos Profesionales</h3>
+        <h6 class="card-subtitle">
+          Configure su trabajo, experiencia, universidad egresada, etc....
+        </h6>
+        <!--- ------------------
+                Modal para profesional (NgbdModalBasicComponent)  
+                ---------------------->
+        <ng-template #content2 let-modal>
+          <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">
+              Actualizar Perfil Profesional
+            </h4>
+            <button
+              type="button"
+              class="close"
+              aria-label="Close"
+              (click)="modal.dismiss('Cross click')"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="dateOfBirth">EXPERIENCIA</label>
+                <div class="input-group">
+                  <textarea rows="3" cols="35" >
+                    Experiencia.....
+                  </textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="dateOfBirth">TRABAJO ACTUAL</label>
+                <div class="input-group">
+                  <input
+                    class="form-control"
+                    placeholder="trabajo..."
+                    type="text"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">
+                      <i class="fa fa-user"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="dateOfBirth">UNIVERSIDAD EGRESADA</label>
+                <div class="input-group">
+                  <input
+                    class="form-control"
+                    placeholder="universidad..."
+                    type="text"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">
+                      <i class="fa fa-user"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-dark"
+              (click)="modal.close('Save click')"
+            >
+              Guardar
+            </button>
+          </div>
+        </ng-template>
+
+        <button
+          class="btn btn-lg btn-outline-primary btn-block"
+          (click)="open2(content2)"
+        >
+          Configurar Datos Profesionales
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
