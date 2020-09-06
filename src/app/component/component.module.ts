@@ -23,7 +23,9 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { CardsComponent } from './card/card.component';
 import { ExamenesComponent } from './examenes/examenes.component';
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
+import { PreguntaComponent } from './pregunta/pregunta.component';
 // import { ExamenComponent } from './examen/examen.component';
+import { PreguntaModule } from './pregunta/pregunta.module';
 
 @NgModule({
   imports: [
@@ -31,7 +33,8 @@ import { ConfiguracionComponent } from './configuracion/configuracion.component'
     RouterModule.forChild(ComponentsRoutes),
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    PreguntaModule
   ],
   declarations: [
     NgbdpregressbarBasicComponent,
@@ -50,8 +53,9 @@ import { ConfiguracionComponent } from './configuracion/configuracion.component'
     ButtonsComponent,
     CardsComponent,
     ExamenesComponent,
-    ConfiguracionComponent/* ,*/
-    // ExamenComponent
+    ConfiguracionComponent,
+    PreguntaComponent ,
+    ExamenesComponent
   ]
 })
 export class ComponentsModule {}

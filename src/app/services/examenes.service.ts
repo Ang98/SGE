@@ -16,11 +16,11 @@ export class ExamenesServices {
 
   crearExamen = (examen: ExamenModel) => this.http.post(`${this.url}`, examen).pipe(map( (resp: any) => resp));
 
-  getExamen = (id: String) =>  this.http.get(`${this.url}/id`);
+  getExamen = (id: String) =>  this.http.get(`${this.url}/${id}`).pipe( map( this.crearExamenModel ));
 
   getExamenes = () => this.http.get(`${this.url}`).pipe( map(this.arrayCrearExamenes));
 
-  borrarExamen = (id: string) => this.http.delete(`${this.url}/id`);
+  borrarExamen = (id: string) => this.http.delete(`${this.url}/${id}`);
 
   actualizarExamen = (id: String, examen: ExamenModel) => this.http.put(`${this.url}/${id}`, examen);
 
@@ -36,5 +36,11 @@ export class ExamenesServices {
     }
     console.log(examenes);
     return examenes;
+  }
+
+  private crearExamenModel = ( examenObject: any) => {
+    const examen: ExamenModel = examenObject;
+    console.log(examenObject);
+    return examen;
   }
 }

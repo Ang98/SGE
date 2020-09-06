@@ -16,11 +16,11 @@ export class PreguntasServices {
 
   crearPregunta = (pregunta: PreguntaModel) => this.http.post(`${this.url}`, pregunta).pipe(map( (resp: any) => resp));
 
-  getExamen = (id: String) =>  this.http.get(`${this.url}/id`);
+  getPregunta = (id: String) =>  this.http.get(`${this.url}/${id}`).pipe(map(this.crearPreguntaModel));
 
-  getExamenes = () => this.http.get(`${this.url}`).pipe( map(this.arrayCrearPreguntas));
+  getPreguntas = () => this.http.get(`${this.url}`).pipe( map(this.arrayCrearPreguntas));
 
-  borrarExamen = (id: string) => this.http.delete(`${this.url}/id`);
+  borrarExamen = (id: string) => this.http.delete(`${this.url}/${id}`);
 
   actualizarExamen = (id: String, examen: PreguntaModel) => this.http.put(`${this.url}/${id}`, examen);
 
@@ -28,8 +28,19 @@ export class PreguntasServices {
   private arrayCrearPreguntas = (preguntasObject: any) => {
     const preguntas: PreguntaModel[] = [];
 
-    if (preguntasObject !== null) {  Object.keys(preguntasObject).forEach( key => preguntas.push(preguntasObject[key])); }
+    if (preguntasObject !== null) {  Object.keys(preguntasObject).forEach( key => {
+        const pregunta: PreguntaModel = preguntasObject[key];
+        pregunta.id = key;
+        preguntas.push(pregunta);
+      });
+    }
+    console.log(preguntas);
 
     return preguntas;
+  }
+
+  private crearPreguntaModel = ( examenObject: any) => {
+    const examen: PreguntaModel = examenObject;
+    return examen;
   }
 }
