@@ -23,6 +23,7 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { CardsComponent } from './card/card.component';
 import { ExamenesComponent } from './examenes/examenes.component';
 import { ConfiguracionComponent } from './configuracion/configuracion.component';
+import { PruebaComponent } from './prueba/prueba.component';
 import { PreguntaComponent } from './pregunta/pregunta.component';
 // import { ExamenComponent } from './examen/examen.component';
 import { PreguntaModule } from './pregunta/pregunta.module';
@@ -55,7 +56,9 @@ import { PreguntaModule } from './pregunta/pregunta.module';
     ExamenesComponent,
     ConfiguracionComponent,
     PreguntaComponent ,
-    ExamenesComponent
+    ExamenesComponent,
+    PruebaComponent
+    // ExamenComponent
   ]
 })
 export class ComponentsModule {}
